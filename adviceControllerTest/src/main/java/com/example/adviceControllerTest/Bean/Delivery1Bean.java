@@ -1,0 +1,17 @@
+package com.example.adviceControllerTest.Bean;
+
+import com.example.adviceControllerTest.Model.DTO.DeliveryCostDTO;
+import org.springframework.stereotype.Component;
+
+@Component
+public class Delivery1Bean {
+    public DeliveryCostDTO exec(String start, String end) {
+        // TODO 출발역 도착역으로 사이즈별 예상 금액
+        // TODO 이거 비용 알고리즘이 없음;;
+        DeliveryCostDTO deliveryCostDTO = new DeliveryCostDTO();
+        deliveryCostDTO.setMidCost(1800);
+        deliveryCostDTO.setSmallCost(1200);
+
+        return deliveryCostDTO;
+    }
+}

@@ -1,0 +1,18 @@
+package com.example.adviceControllerTest.Repository;
+
+import com.example.adviceControllerTest.Model.DAO.StorageDAO;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.List;
+
+public interface StorageDAORepository extends JpaRepository<StorageDAO, Long> {
+
+    List<StorageDAO> findStorageDAOByStationId(long stationId);
+
+    StorageDAO findStorageDAOByStationIdAndStorageNumber(long stationId, int storageNumber);
+
+    StorageDAO findStorageDAOByStorageId(long storageId);
+
+    StorageDAO findStorageDAOByStoragePasswordId(long password);
+
+}
